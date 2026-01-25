@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "./monokai.css";
+
 @font-face {
   font-family: 'Adamina';
   src: url({{ "/assets/Adamina/Adamina-Regular.ttf" | relative_url }});
@@ -15,6 +17,38 @@
 
 $primary_color: {{ site.color | default: "#a505f0" }};
 
+.logo-light {
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.logo-dark {
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+html:not(.dark) {
+  .logo-light {
+    display: block;
+  }
+
+  .logo-dark {
+    display: none;
+  }
+}
+
+html.dark {
+  .logo-light {
+    display: none;
+  }
+
+  .logo-dark {
+    display: block;
+  }
+}
+
 .share-button {
    background-color: $primary_color;
    border-color: $primary_color;
@@ -27,4 +61,9 @@ $primary_color: {{ site.color | default: "#a505f0" }};
 h1 {
    text-decoration-color: $primary_color;
    text-decoration-line: underline;
+}
+
+.prose {
+  width: 80% !important;
+  max-width: 80% !important;
 }

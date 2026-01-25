@@ -2,30 +2,30 @@
 layout: base
 ---
 
-<div class="flex justify-center md:pt-8 w-full md:w-4/5 mx-auto fadeIn">
-  <div class="flex flex-col md:flex-row items-center">
-    <div class="md:basis-4/6">
-      <h1 class="text-2xl md:text-4xl xl:text-5xl text-center py-6 md:p-6">{{page.title}}</h1>
-      <div class="flex flex-wrap justify-center gap-4">
-        {% for tag in page.tags %}
-        <a class="text-sm text-slate-700 underline md:no-underline hover:underline dark:text-slate-100/80" href="{{ '/tags#' | append: tag | relative_url }}">#{{tag}}</a>
-        {% endfor %}
-      </div>
-      <div class="flex justify-center items-center gap-2 pt-4">
-        <span class="text-slate-700 dark:text-slate-100/80">{{page.author | default: site.author }}</span>
-        <p class="text-slate-700 dark:text-slate-100/80">{{ page.date | date: "%d-%m-%Y" }}</p>
-      </div>
-      <div class="mx-auto p-4">
-        {% include sharing.html %}
-      </div>
+<div class="flex flex-col justify-center md:pt-8 w-full md:w-4/5 mx-auto fadeIn">
+  <div class="flex flex-col items-center">
+    <img src="{{ page.image | relative_url }}" alt="">
+  </div>
+  <div class="items-center">
+    <h1 class="text-2xl md:text-4xl xl:text-5xl text-center py-6 md:p-6">{{page.title}}</h1>
+    <div class="flex flex-wrap justify-center gap-4">
+      {% for tag in page.tags %}
+      <a class="text-sm text-slate-700 underline md:no-underline hover:underline dark:text-slate-100/80" href="{{ '/tags#' | append: tag | relative_url }}">#{{tag}}</a>
+      {% endfor %}
     </div>
-    <img src="{{ page.image | relative_url }}" alt="" class="basis-2/6  w-11/12 md:w-5/12 p-2 md:px-0">
+    <div class="flex justify-center items-center gap-2 pt-4">
+      <span class="text-slate-700 dark:text-slate-100/80">{{page.author | default: site.author }}</span>
+      <p class="text-slate-700 dark:text-slate-100/80">{{ page.date | date: "%d-%m-%Y" }}</p>
+    </div>
+    <div class="mx-auto p-4">
+      {% include sharing.html %}
+    </div>
   </div>
 </div>
 
 <div class="mx-auto py-4 md:py-12 fadeIn">
   <div class="flex justify-center pb-4 md:pb-8">
-    <article class="prose md:prose-lg prose-p:font-extralight prose-headings:font-light prose-slate dark:prose-invert prose-img:mx-auto prose-img:w-2/3">
+    <article class="prose prose-lg prose-p:font-extralight prose-headings:font-light prose-slate dark:prose-invert prose-img:mx-auto prose-img:w-2/3">
       {{ content }}
     </article>
   </div>

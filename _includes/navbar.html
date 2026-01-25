@@ -5,7 +5,12 @@
 
 <nav class="py-4">
   <div class="container mx-auto flex justify-between items-center">
-    <h5 class="text-xl md:text-2xl font-semibold"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h5>
+    <h5 class="text-xl md:text-2xl font-semibold">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/logo-light.svg' | relative_url }}" class="logo-light" width="150px" />
+        <img src="{{ '/assets/images/logo-dark.svg' | relative_url }}" class="logo-dark" width="150px" />
+      </a>
+    </h5>
     <div class="my-auto hidden md:flex items-center space-x-4">
       {%- if titles_size > 0 -%}
       {%- for path in page_paths -%}

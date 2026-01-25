@@ -1,12 +1,11 @@
-domain: example.com
-url: https://example.com
-baseurl: "/wind"
+domain: blog.zokai.dev
+url: https://blog.zokai.dev
+baseurl: "/"
 
-title: Wind
-email: wind@example.com
-author: Wind Sample
+title: zokai.dev
+author: Zokai
 
-lang: en
+lang: pt-br
 
 plugins:
   - jekyll-seo-tag
@@ -16,6 +15,11 @@ color: "#13ccf9"
 #   shortname: example-com
 #
 rrss:
-  email: "example@example.cl"
-  telegram: "https://t.me/"
-  discord: "https://discord.com/"
+  # email: "example@example.cl"
+  # telegram: "https://t.me/"
+  # discord: "https://discord.com/"
+
+collections:
+  playlists:
+    output: true
+    permalink: /playlists/:slug
