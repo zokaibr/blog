@@ -63,6 +63,14 @@ h1 {
    text-decoration-line: underline;
 }
 
+blockquote p::before {
+  content: none !important;
+}
+
+blockquote p::after {
+  content: none !important;
+}
+
 .prose {
   width: 80% !important;
   max-width: 80% !important;
