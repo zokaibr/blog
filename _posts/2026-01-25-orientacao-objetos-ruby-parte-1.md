@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Orientação a Objetos com Ruby (Parte 01) - Introdução e História'
+title: 'Testing codeberg - Orientação a Objetos com Ruby (Parte 01) - Introdução e História'
 image: /assets/images/posts/ruby-parte-01.webp
 tags:
   - ruby
